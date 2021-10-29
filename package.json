@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node prebuild.js && next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -12,6 +12,7 @@
     "@openlab/vercel-netlify-cms-github": "^1.1.1",
     "babel-plugin-styled-components": "^1.13.2",
     "hamburger-react": "^2.4.1",
+    "netlify-cms-app": "^2.15.57",
     "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",

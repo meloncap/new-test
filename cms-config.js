@@ -5,7 +5,7 @@ module.exports = {
     name: 'github',
     repo: 'yuribmontez/solaland-test',
     base_url:' https://solaland-test.vercel.app',
-    auth_endpoint: 'api/auth/',
+    // auth_endpoint: 'api/auth/',
     branch: 'main',
   },
   load_config_file: false,

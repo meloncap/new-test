@@ -11,6 +11,7 @@ module.exports = {
   load_config_file: false,
   media_folder: 'public/img/drops',
   public_folder: '/img/drops',
+  publish_mode: 'editorial_workflow',
   collections: [
     {
       name: 'drop',
@@ -25,7 +26,7 @@ module.exports = {
         { label: 'Discord URL', name: 'discord', widget: 'string' },
         { label: 'Image', name: 'image', widget: 'image', allow_multiple: false },
         { label: 'Mint Website', name: 'website', widget: 'string'  },
-        { label: 'Mint date', name: 'date', widget: 'datetime', format: "MMD", dateFormat: "MMD", timeFormat: false },
+        { label: 'Mint date', name: 'date', widget: 'datetime', format: "MMDD", dateFormat: "MMDD", timeFormat: false },
         { label: 'Mint price', name: 'price', widget: 'number', value_type: 'float' },
       ]
     }

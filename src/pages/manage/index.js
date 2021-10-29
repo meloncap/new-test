@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-sync-scripts */
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
-import config from 'cms-config'
+import config from '../../../cms-config'
 
 const NetlifyCMS = dynamic(async () => {
   window.CMS_MANUAL_INIT = true

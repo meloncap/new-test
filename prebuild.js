@@ -11,6 +11,7 @@ console.log('BUILD JSON DATA')
 scanDirectories.forEach(processFiles)
 
 function processFiles({ inputDirectory, outputFile }) {
+  console.log('Processing files')
   const dropsDirectory = path.join(process.cwd(), inputDirectory)
   const filenames = fs.readdirSync(dropsDirectory)
 
@@ -24,12 +25,6 @@ function processFiles({ inputDirectory, outputFile }) {
     return jsonData
   })).then(results => {
     const drops = results.filter(Boolean)
-
-    // drops.sort({
-    //   date: (a, b) => new Date(b.date) - new Date(a.date),
-    //   displayName: (a, b) => a.displayName.localeCompare(b.displayName),
-    //   uid: (a, b) => a.uid.localeCompare(b.uid)
-    // }[sortBy] || Boolean)
 
     const outputPath = path.join(process.cwd(), outputFile)
     fs.writeFileSync(outputPath, JSON.stringify(drops, null, 2))

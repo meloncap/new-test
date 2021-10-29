@@ -1,13 +1,16 @@
 const isLocalhost = typeof window !== 'undefined' && window.location.host === 'localhost:3000'
 
 module.exports = {
-  backend: isLocalhost ? { name: 'test-repo' } : {
-    name: 'github',
-    repo: 'yuribmontez/solaland-test',
-    base_url:' https://solaland-test.vercel.app',
-    // auth_endpoint: 'api/auth/',
-    branch: 'main',
-  },
+  backend: isLocalhost ?
+    {
+      name: 'test-repo'
+    } : {
+      name: 'git-gateway',
+      repo: 'champozo/new-test',
+      base_url:' https://solaland-test.vercel.app',
+      // auth_endpoint: 'api/auth/',
+      branch: 'main',
+    },
   load_config_file: false,
   media_folder: 'public/img/drops',
   public_folder: '/img/drops',

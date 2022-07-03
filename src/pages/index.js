@@ -37,7 +37,7 @@ export async function getStaticProps() {
   const data = await (await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=solana')).json();
   const solana = data[0]
 
-  const response = await (await fetch('https://api-mainnet.magiceden.io/rpc/getAggregatedCollectionMetrics')).json();
+  const response = await (await fetch('http://api-mainnet.magiceden.dev/v2/rpc/getAggregatedCollectionMetrics')).json();
   const collections = response.results.map(obj => {
     return {
       price: obj.avgPrice.value1d,
